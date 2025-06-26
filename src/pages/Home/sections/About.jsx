@@ -2,7 +2,7 @@ import Title from "../components/Title";
 
 function About() {
   return (
-    <div className="pt-40 pb-20 bg-[#1E293B] px-4">
+    <div id="about" className="pt-40 pb-20 bg-[#1E293B] px-4">
       <Title>About Clin Technologies</Title>
       <div class="flex flex-col gap-2 max-w-[1000px] mx-auto leading-[1.7] text-[#f8fafcd2] text-base">
         <p>

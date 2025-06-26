@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import LogoShape from "../../../components/LogoShape";
+import { Link } from "react-router";
 
 const Banner = () => {
   const canvasRef = useRef(null);
@@ -103,18 +104,18 @@ const Banner = () => {
         </p>
 
         <div className="mt-[40px] opacity-0 animate-fade-in-up-delay-5 flex justify-center gap-5 md:flex-row flex-col">
-          <a
+          <Link
             className="bg-transparent border-2 border-[#3b82f6] text-white px-8 py-4 rounded-full hover:bg-[rgba(59,130,246,0.1)] transition-colors shadow-[0_5px_15px_rgba(37,99,235,0.2)] inline-block text-center"
-            href="/login"
+            to="/login"
           >
             Login
-          </a>
-          <a
+          </Link>
+          <Link
             className="bg-gradient-to-r from-[#3b82f6] to-[#2563eb] text-white px-8 py-4 rounded-full hover:translate-y-[-3px] hover:shadow-[0_8px_20px_rgba(37,99,235,0.5)] transition-all shadow-[0_5px_15px_rgba(37,99,235,0.4)] relative overflow-hidden z-1 inline-block text-center"
-            href="/signUp"
+            to="/signUp"
           >
             Signup
-          </a>
+          </Link>
         </div>
       </div>
 

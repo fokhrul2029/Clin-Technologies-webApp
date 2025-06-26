@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Pera from "../components/Pera";
 import Title from "../components/Title";
 
@@ -13,14 +14,14 @@ function Benefits() {
   const ctaButtons = [
     {
       text: "Login",
-      href: "#",
+      to: "/login",
       variant: "outline",
       className:
         "bg-transparent border-2 border-[#3b82f6] text-white px-8 py-4 rounded-full hover:bg-[rgba(59,130,246,0.1)] transition-colors shadow-[0_5px_15px_rgba(37,99,235,0.2)]",
     },
     {
       text: "Signup",
-      href: "#",
+      to: "/signUp",
       variant: "primary",
       className:
         "bg-gradient-to-r from-[#3b82f6] to-[#2563eb] text-white px-8 py-4 rounded-full hover:translate-y-[-3px] hover:shadow-[0_8px_20px_rgba(37,99,235,0.5)] transition-all shadow-[0_5px_15px_rgba(37,99,235,0.4)] relative overflow-hidden z-1",
@@ -46,15 +47,14 @@ function Benefits() {
         </ul>
         <div className="flex justify-center gap-5 mt-[30px] md:flex-row flex-col">
           {ctaButtons.map((button, index) => (
-            <a
+            <Link
               key={index}
-              href={button.href}
+              to={button.to}
               className={`${button.className} inline-block text-center no-underline font-medium`}
-              target="_blank"
               rel="noopener noreferrer"
             >
               {button.text}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
